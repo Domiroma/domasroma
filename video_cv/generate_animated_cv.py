@@ -698,6 +698,294 @@ ICON_DRAWERS = {
 }
 
 
+WHITEBOARD_STYLE = True
+
+
+def wb_color(name: str, alpha: int = 255) -> tuple[int, int, int, int]:
+    return PALETTE[name] + (alpha,)
+
+
+def draw_wb_background(draw: ImageDraw.ImageDraw, frame: int) -> None:
+    draw.rectangle((0, 0, WIDTH, HEIGHT), fill=(252, 250, 244, 255))
+    for y in range(86, HEIGHT, 86):
+        draw.line((0, y, WIDTH, y + math.sin(frame / 80 + y) * 2), fill=(42, 50, 70, 13), width=1)
+    for x in range(95, WIDTH, 95):
+        draw.line((x, 0, x + math.sin(frame / 90 + x) * 2, HEIGHT), fill=(42, 50, 70, 8), width=1)
+    for i in range(42):
+        x = (i * 143 + 37) % WIDTH
+        y = (i * 79 + 53) % HEIGHT
+        draw.ellipse((x, y, x + 2, y + 2), fill=(42, 50, 70, 20))
+
+
+def wb_reveal(local: float, index: int, total: int, span: float = 0.55) -> float:
+    start = 0.06 + index * (span / max(1, total))
+    end = start + span / max(2, total) * 1.6
+    return smootherstep((local - start) / (end - start))
+
+
+def draw_wb_partial_text(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    xy: tuple[float, float],
+    font: ImageFont.ImageFont,
+    fill: tuple[int, int, int],
+    progress: float,
+) -> None:
+    amount = int(len(text) * clamp(progress))
+    if amount > 0:
+        draw.text(xy, text[:amount], font=font, fill=fill)
+
+
+def draw_wb_header(draw: ImageDraw.ImageDraw, scene: Scene, t: float, local: float, frame: int) -> None:
+    progress = smootherstep(local * 5.0)
+    title = scene.title
+    kicker = scene.kicker
+    draw_wb_partial_text(draw, title, (78, 58), FONTS["title"], PALETTE["ink"], progress)
+    draw_wb_partial_text(draw, kicker, (82, 116), FONTS["subtitle"], PALETTE["muted"], smootherstep(local * 8.0 - 0.7))
+
+    underline = [(82, 157), (170, 153), (265, 158), (360, 154), (478, 158), (560, 154)]
+    pen = draw_sketch_line(draw, underline, smootherstep(local * 2.0 - 0.18), PALETTE["coral"], 5, frame, 225)
+    if 0.10 < local < 0.58:
+        draw_marker_hand(draw, pen[0], pen[1], -0.06 + math.sin(frame / 18) * 0.06, 0.78)
+
+    draw.rounded_rectangle((775, 68, 1194, 106), radius=20, outline=wb_color("muted", 80), width=2)
+    draw.rounded_rectangle((775, 68, 775 + 419 * (t / DURATION), 106), radius=20, fill=wb_color("teal", 120))
+    draw.text((795, 75), f"{int(t):02d}s / 90s", font=FONTS["small"], fill=PALETTE["ink"])
+
+
+def draw_wb_caption(draw: ImageDraw.ImageDraw, scene: Scene, local: float, frame: int) -> None:
+    box = (92, 558, 1188, 668)
+    progress = smootherstep(local * 4.0 - 0.2)
+    outline = [(box[0], box[1]), (box[2], box[1] + 3), (box[2] - 5, box[3]), (box[0] + 4, box[3]), (box[0], box[1])]
+    draw.rounded_rectangle(box, radius=24, fill=(255, 255, 255, int(214 * progress)))
+    draw_sketch_line(draw, outline, progress, PALETTE["ink"], 3, frame, 130)
+    lines = wrap_lines(draw, scene.caption, FONTS["caption"], WIDTH - 250)
+    y = 590
+    text_progress = smootherstep(local * 8.0 - 0.7)
+    for line in lines[:3]:
+        w, h = text_size(draw, line, FONTS["caption"])
+        draw_wb_partial_text(draw, line, (WIDTH / 2 - w / 2, y), FONTS["caption"], PALETTE["ink"], text_progress)
+        y += h + 7
+
+
+def draw_marker_hand(draw: ImageDraw.ImageDraw, x: float, y: float, angle: float, scale: float = 1.0) -> None:
+    ux, uy = math.cos(angle), math.sin(angle)
+    vx, vy = -uy, ux
+    length = 74 * scale
+    width = 20 * scale
+    tail = (x - ux * length, y - uy * length)
+    body = [
+        (x - vx * width / 2, y - vy * width / 2),
+        (tail[0] - vx * width / 2, tail[1] - vy * width / 2),
+        (tail[0] + vx * width / 2, tail[1] + vy * width / 2),
+        (x + vx * width / 2, y + vy * width / 2),
+    ]
+    draw.polygon(body, fill=(245, 245, 240, 255), outline=wb_color("ink", 230))
+    draw.line((tail[0] - vx * width / 2, tail[1] - vy * width / 2, tail[0] + vx * width / 2, tail[1] + vy * width / 2), fill=wb_color("coral"), width=max(2, int(6 * scale)))
+    draw.ellipse((tail[0] - 32 * scale, tail[1] - 18 * scale, tail[0] + 18 * scale, tail[1] + 27 * scale), fill=(255, 214, 185, 245), outline=wb_color("ink", 160), width=2)
+
+
+def draw_wb_arc(
+    draw: ImageDraw.ImageDraw,
+    box: tuple[float, float, float, float],
+    start: float,
+    end: float,
+    progress: float,
+    color: tuple[int, int, int] = PALETTE["ink"],
+    width: int = 4,
+    frame: int = 0,
+) -> None:
+    angle = start + (end - start) * clamp(progress)
+    for offset in (-1.0, 1.0):
+        wobble = math.sin(frame / 18 + box[0]) * 1.1
+        shifted = (box[0] + offset, box[1] + wobble, box[2] + offset, box[3] + wobble)
+        draw.arc(shifted, start, angle, fill=color + (205,), width=width)
+
+
+def draw_wb_box(
+    draw: ImageDraw.ImageDraw,
+    box: tuple[float, float, float, float],
+    progress: float,
+    color: tuple[int, int, int] = PALETTE["ink"],
+    width: int = 4,
+    frame: int = 0,
+) -> None:
+    x1, y1, x2, y2 = box
+    points = [(x1, y1), (x2, y1 + 3), (x2 - 5, y2), (x1 + 3, y2), (x1, y1)]
+    draw_sketch_line(draw, points, progress, color, width, frame, 210)
+
+
+def draw_wb_person(draw: ImageDraw.ImageDraw, x: float, y: float, scale: float, progress: float, frame: int, accent: str = "blue") -> None:
+    s = scale
+    p1 = clamp(progress * 1.3)
+    body = [(x, y + 48 * s), (x, y + 122 * s), (x - 45 * s, y + 180 * s), (x, y + 122 * s), (x + 45 * s, y + 180 * s)]
+    draw_sketch_line(draw, body, p1, PALETTE["ink"], max(2, int(4 * s)), frame, 210)
+    draw_wb_arc(draw, (x - 38 * s, y - 26 * s, x + 38 * s, y + 50 * s), 0, 360, p1, PALETTE["ink"], max(2, int(4 * s)), frame)
+    hair = [(x - 38 * s, y + 8 * s), (x - 18 * s, y - 28 * s), (x + 16 * s, y - 22 * s), (x + 38 * s, y + 5 * s)]
+    draw_sketch_line(draw, hair, clamp(progress * 1.5 - 0.15), (95, 61, 48), max(2, int(4 * s)), frame, 220)
+    arm = math.sin(frame / 8) * 8
+    draw_sketch_line(draw, [(x, y + 80 * s), (x - 72 * s, y + (95 - arm) * s)], clamp(progress * 1.4 - 0.05), PALETTE[accent], max(3, int(5 * s)), frame, 230)
+    draw_sketch_line(draw, [(x, y + 80 * s), (x + 72 * s, y + (95 + arm) * s)], clamp(progress * 1.4 - 0.08), PALETTE[accent], max(3, int(5 * s)), frame, 230)
+    if progress > 0.68:
+        draw.ellipse((x - 15 * s, y + 5 * s, x - 9 * s, y + 11 * s), fill=wb_color("ink"))
+        draw.ellipse((x + 9 * s, y + 5 * s, x + 15 * s, y + 11 * s), fill=wb_color("ink"))
+        draw.arc((x - 16 * s, y + 14 * s, x + 16 * s, y + 33 * s), 8, 172, fill=wb_color("ink"), width=max(1, int(2 * s)))
+
+
+def wb_keyword(draw: ImageDraw.ImageDraw, text: str, x: float, y: float, progress: float, color: str, frame: int) -> None:
+    if progress <= 0:
+        return
+    w, h = text_size(draw, text, FONTS["label"])
+    box = (x - w / 2 - 18, y - 9, x + w / 2 + 18, y + h + 10)
+    draw_wb_box(draw, box, progress, PALETTE[color], 3, frame)
+    if progress > 0.45:
+        draw.text((x - w / 2, y), text, font=FONTS["label"], fill=PALETTE["ink"])
+
+
+def wb_intro(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    p = wb_reveal(local, 0, 5)
+    draw_wb_person(draw, 640, 248, 1.08, p, frame, "blue")
+    draw_wb_arc(draw, (565, 188, 715, 338), 220, 500, wb_reveal(local, 1, 5), PALETTE["coral"], 6, frame)
+    draw_sketch_line(draw, [(640, 340), (620, 388), (640, 430), (660, 388), (640, 340)], wb_reveal(local, 1, 5), PALETTE["coral"], 5, frame, 220)
+    for i, (x, h) in enumerate([(385, 88), (455, 128), (520, 74), (815, 114), (890, 82)]):
+        pr = wb_reveal(local, i + 2, 7)
+        draw_wb_box(draw, (x, 420 - h, x + 42, 420), pr, PALETTE["ink"], 3, frame)
+        if pr > 0.6:
+            draw.line((x + 12, 420 - h + 24, x + 30, 420 - h + 24), fill=wb_color("blue", 170), width=4)
+    wb_keyword(draw, "OLSZTYN", 640, 444, wb_reveal(local, 4, 5), "blue", frame)
+
+
+def wb_twins(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    draw_wb_person(draw, 520, 255, 0.92, wb_reveal(local, 0, 5), frame, "purple")
+    draw_wb_person(draw, 760, 255, 0.92, wb_reveal(local, 1, 5), frame, "pink")
+    draw_sketch_line(draw, [(575, 330), (622, 350), (670, 350), (715, 330)], wb_reveal(local, 2, 5), PALETTE["mint"], 5, frame, 220)
+    wb_keyword(draw, "negocjacje", 460, 430, wb_reveal(local, 2, 5), "coral", frame)
+    wb_keyword(draw, "współpraca", 655, 455, wb_reveal(local, 3, 5), "teal", frame)
+    wb_keyword(draw, "dzielenie", 850, 430, wb_reveal(local, 4, 5), "purple", frame)
+
+
+def wb_restaurant(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    tray = [(430, 420), (850, 420)]
+    draw_sketch_line(draw, tray, wb_reveal(local, 0, 6), PALETTE["ink"], 6, frame, 220)
+    draw_wb_arc(draw, (515, 280, 685, 405), 0, 360, wb_reveal(local, 1, 6), PALETTE["ink"], 5, frame)
+    draw_wb_arc(draw, (555, 315, 645, 382), 0, 360, wb_reveal(local, 2, 6), PALETTE["mint"], 5, frame)
+    draw_wb_arc(draw, (745, 270, 875, 400), 0, 360, wb_reveal(local, 2, 6), PALETTE["orange"], 5, frame)
+    angle = frame / 7
+    if local > 0.38:
+        draw.line((810, 335, 810 + math.cos(angle) * 35, 335 + math.sin(angle) * 35), fill=wb_color("ink"), width=4)
+        draw.line((810, 335, 810, 296), fill=wb_color("ink"), width=3)
+    for i, text in enumerate(["tempo", "kontakt", "organizacja"]):
+        wb_keyword(draw, text, 438 + i * 200, 455, wb_reveal(local, i + 3, 6), ["coral", "blue", "teal"][i], frame)
+
+
+def wb_gdansk(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    draw_sketch_line(draw, [(470, 380), (640, 260), (810, 380), (470, 380)], wb_reveal(local, 0, 6), PALETTE["ink"], 5, frame, 220)
+    draw_wb_box(draw, (515, 380, 765, 455), wb_reveal(local, 1, 6), PALETTE["ink"], 4, frame)
+    draw_wb_partial_text(draw, "WSB Merito", (555, 397), FONTS["subtitle"], PALETTE["ink"], wb_reveal(local, 2, 6))
+    for i, (text, x, color) in enumerate([("piekarnia", 390, "orange"), ("eventy", 640, "purple"), ("Żabka", 890, "green")]):
+        wb_keyword(draw, text, x, 480, wb_reveal(local, i + 3, 6), color, frame)
+    draw_sketch_line(draw, [(390, 456), (515, 430), (640, 456), (765, 430), (890, 456)], wb_reveal(local, 5, 6), PALETTE["blue"], 4, frame, 190)
+
+
+def wb_award(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    draw_wb_box(draw, (435, 245, 625, 440), wb_reveal(local, 0, 5), PALETTE["ink"], 4, frame)
+    draw_wb_partial_text(draw, "Dyplom", (475, 270), FONTS["subtitle"], PALETTE["ink"], wb_reveal(local, 1, 5))
+    for i, y in enumerate([325, 355, 385]):
+        draw_sketch_line(draw, [(475, y), (590, y + math.sin(frame / 20 + i) * 2)], wb_reveal(local, i + 1, 6), PALETTE["muted"], 3, frame, 160)
+    star = [(705, 245), (734, 306), (800, 314), (752, 358), (765, 425), (705, 392), (645, 425), (658, 358), (610, 314), (676, 306), (705, 245)]
+    draw_sketch_line(draw, star, wb_reveal(local, 2, 5), PALETTE["orange"], 5, frame, 230)
+    draw_wb_partial_text(draw, "HR", (790, 330), FONTS["giant"], PALETTE["purple"], wb_reveal(local, 3, 5))
+    wb_keyword(draw, "wyróżnienie Rektora", 650, 470, wb_reveal(local, 4, 5), "teal", frame)
+
+
+def wb_esn(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    funnel = [(420, 250), (620, 250), (565, 355), (535, 355), (535, 430), (505, 430), (505, 355), (420, 250)]
+    draw_sketch_line(draw, funnel, wb_reveal(local, 0, 6), PALETTE["blue"], 5, frame, 220)
+    draw_wb_partial_text(draw, "rekrutacje", (447, 275), FONTS["label"], PALETTE["ink"], wb_reveal(local, 1, 6))
+    for i in range(4):
+        x = 690 + i * 58
+        y = 260 + math.sin(frame / 12 + i) * 8
+        draw_wb_box(draw, (x, y, x + 43, y + 62), wb_reveal(local, i + 2, 7), PALETTE["purple"], 3, frame)
+        if local > 0.35 + i * 0.06:
+            draw.ellipse((x + 15, y + 12, x + 28, y + 25), outline=wb_color("ink"), width=2)
+    draw_wb_box(draw, (700, 390, 930, 455), wb_reveal(local, 5, 6), PALETTE["coral"], 5, frame)
+    draw_wb_partial_text(draw, "wyjazd", (760, 410), FONTS["label"], PALETTE["ink"], wb_reveal(local, 5, 6))
+
+
+def wb_porto(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    path = [(420, 385), (540, 270), (705, 250), (860, 340)]
+    draw_sketch_line(draw, path, wb_reveal(local, 0, 5), PALETTE["blue"], 4, frame, 210)
+    p = wb_reveal(local, 1, 5)
+    pen = draw_partial_line(draw, path, p, PALETTE["teal"] + (0,), 1)
+    plane = [(pen[0] + 36, pen[1]), (pen[0] - 25, pen[1] - 20), (pen[0] - 10, pen[1]), (pen[0] - 25, pen[1] + 20)]
+    draw.polygon(plane, outline=wb_color("ink"), fill=wb_color("blue", 60))
+    wb_keyword(draw, "Gdańsk", 420, 430, wb_reveal(local, 2, 5), "blue", frame)
+    wb_keyword(draw, "Porto", 860, 385, wb_reveal(local, 3, 5), "coral", frame)
+    wb_keyword(draw, "międzynarodowo", 640, 470, wb_reveal(local, 4, 5), "teal", frame)
+
+
+def wb_crochet(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    center = (440, 350)
+    for i, r in enumerate([92, 72, 52, 32]):
+        draw_wb_arc(draw, (center[0] - r, center[1] - r, center[0] + r, center[1] + r), 0, 360, wb_reveal(local, i, 7), PALETTE["pink"], 5, frame)
+    thread = [(530, 350), (640, 275), (770, 275), (870, 360), (780, 455), (635, 425)]
+    pen = draw_sketch_line(draw, thread, wb_reveal(local, 3, 7), PALETTE["pink"], 6, frame, 235)
+    if 0.35 < local < 0.9:
+        draw_marker_hand(draw, pen[0], pen[1], -0.4, 0.64)
+    for i, (text, x, y, color) in enumerate([("cierpliwość", 650, 250, "teal"), ("pomysł", 815, 255, "purple"), ("połączenia", 830, 460, "coral")]):
+        wb_keyword(draw, text, x, y, wb_reveal(local, i + 4, 7), color, frame)
+
+
+def wb_final(draw: ImageDraw.ImageDraw, local: float, frame: int) -> None:
+    draw_wb_person(draw, 430, 250, 1.05, wb_reveal(local, 0, 6), frame, "blue")
+    draw_wb_partial_text(draw, "HR", (585, 250), FONTS["giant"], PALETTE["purple"], wb_reveal(local, 1, 6))
+    for i, (text, y, color) in enumerate([("otwarta", 338, "teal"), ("dobrze zorganizowana", 393, "blue"), ("gotowa na wyzwania", 448, "coral")]):
+        wb_keyword(draw, text, 800, y, wb_reveal(local, i + 2, 6), color, frame)
+    draw_sketch_line(draw, [(545, 395), (635, 430), (730, 395)], wb_reveal(local, 5, 6), PALETTE["mint"], 7, frame, 220)
+
+
+WB_DRAWERS = {
+    "intro": wb_intro,
+    "twins": wb_twins,
+    "restaurant": wb_restaurant,
+    "gdansk": wb_gdansk,
+    "award": wb_award,
+    "esn": wb_esn,
+    "porto": wb_porto,
+    "crochet": wb_crochet,
+    "final": wb_final,
+}
+
+
+def render_whiteboard_content(scene: Scene, t: float, frame_number: int) -> Image.Image:
+    local = clamp((t - scene.start) / (scene.end - scene.start))
+    img = Image.new("RGBA", (WIDTH, HEIGHT), (252, 250, 244, 255))
+    draw = ImageDraw.Draw(img)
+    draw_wb_background(draw, frame_number)
+    draw_wb_header(draw, scene, t, local, frame_number)
+    WB_DRAWERS[scene.icon](draw, local, frame_number)
+    draw_wb_caption(draw, scene, local, frame_number)
+    return apply_camera_motion(img, scene, local, frame_number).convert("RGB")
+
+
+def whiteboard_wipe(previous: Image.Image, current: Image.Image, alpha: float) -> Image.Image:
+    alpha = smootherstep(alpha)
+    x = int(lerp(-WIDTH * 0.12, WIDTH * 1.12, alpha))
+    mask = Image.new("L", (WIDTH, HEIGHT), 0)
+    mask_draw = ImageDraw.Draw(mask)
+    if x > 0:
+        mask_draw.rectangle((0, 0, min(x, WIDTH), HEIGHT), fill=255)
+    for edge in range(36):
+        edge_x = x + edge
+        if 0 <= edge_x < WIDTH:
+            mask_draw.line((edge_x, 0, edge_x, HEIGHT), fill=max(0, 255 - edge * 7))
+    result = Image.composite(current.convert("RGBA"), previous.convert("RGBA"), mask)
+    draw = ImageDraw.Draw(result)
+    draw.rounded_rectangle((x - 84, 232, x + 35, 488), radius=28, fill=(245, 245, 238, 240), outline=wb_color("ink", 160), width=3)
+    draw.text((x - 58, 330), "wipe", font=FONTS["tiny"], fill=PALETTE["muted"])
+    return result.convert("RGB")
+
+
 def current_scene(t: float) -> Scene:
     for scene in SCENES:
         if scene.start <= t < scene.end:
@@ -722,6 +1010,9 @@ def draw_background_details(draw: ImageDraw.ImageDraw, scene: Scene, frame: int)
 
 
 def render_scene_content(scene: Scene, t: float, frame_number: int) -> Image.Image:
+    if WHITEBOARD_STYLE:
+        return render_whiteboard_content(scene, t, frame_number)
+
     local = clamp((t - scene.start) / (scene.end - scene.start))
     img = BG_CACHE[(scene.bg_top, scene.bg_bottom)].copy()
     draw = ImageDraw.Draw(img)
@@ -746,6 +1037,8 @@ def render_frame(frame_number: int) -> Image.Image:
     if index > 0 and t - scene.start < fade_duration:
         previous_scene = SCENES[index - 1]
         previous = render_scene_content(previous_scene, previous_scene.end - 0.001, frame_number)
+        if WHITEBOARD_STYLE:
+            return whiteboard_wipe(previous, current, (t - scene.start) / fade_duration).convert("RGB")
         return slide_blend(previous, current, (t - scene.start) / fade_duration).convert("RGB")
 
     return current
