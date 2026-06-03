@@ -3,6 +3,8 @@
 ## Animated video CV
 
 This repository includes a procedural animated video CV for Dominika Romanow.
+The generator renders a 90-second, 1280x720, 30 fps video with smooth scene
+transitions, subtle camera motion, and hand-drawn sketch accents.
 
 Generate the MP4 and SRT subtitles:
 

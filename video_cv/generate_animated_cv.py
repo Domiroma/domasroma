@@ -21,7 +21,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 WIDTH = 1280
 HEIGHT = 720
-FPS = 24
+FPS = 30
 DURATION = 90.0
 
 ROOT = Path(__file__).resolve().parent
@@ -161,6 +161,11 @@ def smoothstep(value: float) -> float:
     return x * x * (3 - 2 * x)
 
 
+def smootherstep(value: float) -> float:
+    x = clamp(value)
+    return x * x * x * (x * (x * 6 - 15) + 10)
+
+
 def lerp(a: float, b: float, t: float) -> float:
     return a + (b - a) * t
 
@@ -239,6 +244,184 @@ def rounded_card(
     shadow = (x1 + 8, y1 + 10, x2 + 8, y2 + 10)
     draw.rounded_rectangle(shadow, radius=radius, fill=(39, 47, 71, 24))
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=2 if outline else 1)
+
+
+def scene_index(scene: Scene) -> int:
+    return SCENES.index(scene)
+
+
+def staged(local: float, start: float, end: float) -> float:
+    return smootherstep((local - start) / (end - start))
+
+
+def float_offset(frame: int, amount: float, phase: float = 0.0) -> tuple[float, float]:
+    return (
+        math.sin(frame / 41 + phase) * amount,
+        math.cos(frame / 47 + phase * 1.7) * amount,
+    )
+
+
+def shifted_box(box: tuple[float, float, float, float], dx: float, dy: float) -> tuple[float, float, float, float]:
+    x1, y1, x2, y2 = box
+    return x1 + dx, y1 + dy, x2 + dx, y2 + dy
+
+
+def draw_partial_line(
+    draw: ImageDraw.ImageDraw,
+    points: list[tuple[float, float]],
+    progress: float,
+    fill: tuple[int, int, int, int],
+    width: int,
+    joint: str | None = "curve",
+) -> tuple[float, float]:
+    """Draw a polyline only up to progress and return the current pen position."""
+    progress = clamp(progress)
+    if len(points) < 2:
+        return points[0] if points else (0, 0)
+
+    lengths: list[float] = []
+    total = 0.0
+    for a, b in zip(points, points[1:]):
+        segment = math.dist(a, b)
+        lengths.append(segment)
+        total += segment
+    target = total * progress
+
+    drawn: list[tuple[float, float]] = [points[0]]
+    travelled = 0.0
+    pen = points[0]
+    for index, segment in enumerate(lengths):
+        a = points[index]
+        b = points[index + 1]
+        if travelled + segment <= target:
+            drawn.append(b)
+            pen = b
+            travelled += segment
+            continue
+
+        part = 0 if segment == 0 else (target - travelled) / segment
+        pen = (lerp(a[0], b[0], part), lerp(a[1], b[1], part))
+        drawn.append(pen)
+        break
+
+    if len(drawn) > 1:
+        draw.line(drawn, fill=fill, width=width, joint=joint)
+    return pen
+
+
+def draw_sketch_line(
+    draw: ImageDraw.ImageDraw,
+    points: list[tuple[float, float]],
+    progress: float,
+    color: tuple[int, int, int] = PALETTE["ink"],
+    width: int = 5,
+    frame: int = 0,
+    alpha: int = 190,
+) -> tuple[float, float]:
+    pen = points[0]
+    for pass_index, offset in enumerate((-2.0, 1.4)):
+        wobbled = [
+            (
+                x + math.sin(frame / 17 + i * 1.8 + pass_index) * 1.6 + offset,
+                y + math.cos(frame / 19 + i * 1.4 + pass_index) * 1.4 - offset * 0.4,
+            )
+            for i, (x, y) in enumerate(points)
+        ]
+        pen = draw_partial_line(draw, wobbled, progress, color + (alpha,), max(1, width - pass_index))
+    return pen
+
+
+def draw_pencil(draw: ImageDraw.ImageDraw, x: float, y: float, angle: float, scale: float = 1.0) -> None:
+    length = 54 * scale
+    width = 15 * scale
+    ux, uy = math.cos(angle), math.sin(angle)
+    vx, vy = -uy, ux
+    tail = (x - ux * length, y - uy * length)
+    body = [
+        (x - vx * width / 2, y - vy * width / 2),
+        (tail[0] - vx * width / 2, tail[1] - vy * width / 2),
+        (tail[0] + vx * width / 2, tail[1] + vy * width / 2),
+        (x + vx * width / 2, y + vy * width / 2),
+    ]
+    tip = [(x + ux * 14 * scale, y + uy * 14 * scale), body[0], body[-1]]
+    draw.polygon(body, fill=PALETTE["yellow"] + (245,), outline=PALETTE["ink"] + (220,))
+    draw.polygon(tip, fill=(226, 187, 138, 255), outline=PALETTE["ink"] + (220,))
+    draw.line((tail[0] - vx * width / 2, tail[1] - vy * width / 2, tail[0] + vx * width / 2, tail[1] + vy * width / 2), fill=PALETTE["coral"] + (255,), width=max(2, int(4 * scale)))
+
+
+def draw_paper_texture(draw: ImageDraw.ImageDraw, frame: int) -> None:
+    for i in range(34):
+        x = (i * 97 + 31) % WIDTH
+        y = (i * 53 + 71) % HEIGHT
+        drift = math.sin(frame / 90 + i) * 2
+        draw.line((x - 18, y + drift, x + 18, y + drift + 1), fill=(39, 47, 71, 10), width=1)
+
+
+def draw_scene_doodles(draw: ImageDraw.ImageDraw, scene: Scene, local: float, frame: int) -> None:
+    progress = staged(local, 0.05, 0.46)
+    underline = [(86, 151), (190, 146), (310, 153), (430, 149), (535, 154)]
+    pen = draw_sketch_line(draw, underline, progress, PALETTE["coral"], 6, frame, 210)
+
+    card_path = [
+        (328, 178),
+        (950, 172),
+        (1018, 250),
+        (965, 506),
+        (320, 512),
+        (250, 430),
+        (296, 190),
+    ]
+    card_progress = staged(local, 0.16, 0.66)
+    pen = draw_sketch_line(draw, card_path, card_progress, PALETTE["navy"], 4, frame, 90)
+
+    scene_paths = {
+        "intro": [(560, 462), (620, 430), (690, 455), (746, 420), (780, 454)],
+        "twins": [(410, 443), (520, 410), (640, 452), (760, 410), (875, 443)],
+        "restaurant": [(440, 454), (540, 425), (675, 452), (805, 420), (900, 455)],
+        "gdansk": [(338, 482), (480, 448), (640, 482), (800, 448), (950, 482)],
+        "award": [(402, 474), (545, 444), (665, 474), (795, 444), (910, 474)],
+        "esn": [(336, 468), (500, 438), (660, 470), (805, 438), (930, 470)],
+        "porto": [(410, 382), (540, 270), (700, 248), (835, 335), (910, 292)],
+        "crochet": [(465, 335), (610, 248), (805, 252), (900, 360), (755, 440), (640, 375)],
+        "final": [(395, 452), (530, 420), (650, 452), (782, 420), (900, 452)],
+    }
+    path = scene_paths.get(scene.icon, underline)
+    animated = staged(local, 0.26, 0.82)
+    pen = draw_sketch_line(draw, path, animated, PALETTE["teal"], 5, frame, 175)
+
+    if 0.05 < local < 0.86:
+        next_point = path[min(len(path) - 1, max(1, int(animated * (len(path) - 1))))]
+        angle = math.atan2(next_point[1] - pen[1], next_point[0] - pen[0])
+        draw_pencil(draw, pen[0], pen[1], angle, 0.72)
+
+
+def apply_camera_motion(img: Image.Image, scene: Scene, local: float, frame: int) -> Image.Image:
+    zoom = 1.0 + 0.012 * math.sin(frame / 130 + scene_index(scene) * 0.7)
+    pan_x = math.sin(frame / 96 + scene_index(scene)) * 10
+    pan_y = math.cos(frame / 111 + scene_index(scene) * 0.8) * 7
+    scaled_w = int(WIDTH * zoom)
+    scaled_h = int(HEIGHT * zoom)
+    resized = img.resize((scaled_w, scaled_h), Image.Resampling.BICUBIC)
+    left = int((scaled_w - WIDTH) / 2 + pan_x)
+    top = int((scaled_h - HEIGHT) / 2 + pan_y)
+    left = max(0, min(left, scaled_w - WIDTH))
+    top = max(0, min(top, scaled_h - HEIGHT))
+    return resized.crop((left, top, left + WIDTH, top + HEIGHT))
+
+
+def slide_blend(previous: Image.Image, current: Image.Image, alpha: float) -> Image.Image:
+    alpha = smootherstep(alpha)
+    shifted = Image.new("RGBA", (WIDTH, HEIGHT), (255, 255, 255, 0))
+    offset = int((1 - alpha) * 155)
+    shifted.alpha_composite(current.convert("RGBA"), (offset, 0))
+    mask = Image.new("L", (WIDTH, HEIGHT), int(alpha * 255))
+    blended = Image.composite(shifted, previous.convert("RGBA"), mask)
+    wipe = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
+    wipe_draw = ImageDraw.Draw(wipe)
+    x = int(lerp(-260, WIDTH + 260, alpha))
+    wipe_draw.polygon([(x - 120, 0), (x + 20, 0), (x - 120, HEIGHT), (x - 260, HEIGHT)], fill=PALETTE["coral"] + (70,))
+    blended.alpha_composite(wipe)
+    return blended
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont) -> tuple[int, int]:
@@ -538,20 +721,34 @@ def draw_background_details(draw: ImageDraw.ImageDraw, scene: Scene, frame: int)
         draw.ellipse((x, y, x + 7, y + 7), fill=PALETTE["ink"] + (35,))
 
 
-def render_frame(frame_number: int) -> Image.Image:
-    t = frame_number / FPS
-    scene = current_scene(t)
+def render_scene_content(scene: Scene, t: float, frame_number: int) -> Image.Image:
     local = clamp((t - scene.start) / (scene.end - scene.start))
-
     img = BG_CACHE[(scene.bg_top, scene.bg_bottom)].copy()
     draw = ImageDraw.Draw(img)
 
+    draw_paper_texture(draw, frame_number)
     draw_background_details(draw, scene, frame_number)
     draw_header(draw, scene, t, local)
     ICON_DRAWERS[scene.icon](draw, local, frame_number)
+    draw_scene_doodles(draw, scene, local, frame_number)
     draw_caption(img, scene, local)
 
-    return img.convert("RGB")
+    return apply_camera_motion(img, scene, local, frame_number).convert("RGB")
+
+
+def render_frame(frame_number: int) -> Image.Image:
+    t = frame_number / FPS
+    scene = current_scene(t)
+    current = render_scene_content(scene, t, frame_number)
+
+    fade_duration = 0.85
+    index = scene_index(scene)
+    if index > 0 and t - scene.start < fade_duration:
+        previous_scene = SCENES[index - 1]
+        previous = render_scene_content(previous_scene, previous_scene.end - 0.001, frame_number)
+        return slide_blend(previous, current, (t - scene.start) / fade_duration).convert("RGB")
+
+    return current
 
 
 def srt_timestamp(seconds: float) -> str:
