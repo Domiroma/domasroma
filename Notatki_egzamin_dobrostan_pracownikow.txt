@@ -1,0 +1,619 @@
+Dobrostan pracowników - bardzo szczegółowe notatki do egzaminu
+
+Opracowanie powstało na podstawie przesłanych zdjęć: pierwsza kartka z zakresem egzaminacyjnym została potraktowana jako priorytet, a slajdy wykładowcy zostały rozwinięte w pełne notatki. Materiał jest rozszerzony o kontekst, przykłady i gotowe odpowiedzi egzaminacyjne, żeby można było uczyć się bez sięgania do dodatkowych źródeł.
+
+Najważniejsza myśl całego tematu: dobrostan pracownika jest pojęciem szerokim, ale w praktyce organizacyjnej najłatwiej diagnozować go przez satysfakcję zawodową. Satysfakcja zawodowa działa jak „okno pomiarowe” dobrostanu, ponieważ pozwala przełożyć subiektywne odczucia pracownika na konkretne wskaźniki, które organizacja może mierzyć, analizować i świadomie kształtować.
+
+1. Zakres, który na pewno pojawia się w materiałach egzaminacyjnych
+
+• Dobrostan: definicja, ujęcia, rodzaje i znaczenie dla pracownika oraz organizacji.
+
+• Work-life balance: czym jest równowaga między pracą a życiem prywatnym.
+
+• Work-life interface: czy jest tym samym co work-life balance i jak opisywać relacje praca - życie.
+
+• Pomiar dobrostanu: czy dobrostan można mierzyć, jakimi metodami i na jakich poziomach.
+
+• Zarządzanie dobrostanem pracownika: czy można nim zarządzać i jak robić to przez satysfakcję zawodową.
+
+• Satysfakcja zawodowa: czym jest, co na nią wpływa i dlaczego jest częścią dobrostanu.
+
+• Rodzaje dobrostanu i rodzaje satysfakcji.
+
+• Czynniki wpływające na satysfakcję: osobowościowe, sytuacyjne i relacje między ludźmi.
+
+• Fluktuacja pracowników i jej powiązanie z satysfakcją, dobrostanem oraz warunkami pracy.
+
+• Koncepcja dobrostanu subiektywnego i pomiar skalą Satisfaction With Life Scale Dienera.
+
+Do egzaminu: Jeśli trzeba odpowiedzieć jednym zdaniem, napisz: dobrostan pracownika to wielowymiarowy stan pozytywnego funkcjonowania w pracy i poza pracą, obejmujący satysfakcję, emocje, zdrowie, relacje, sens, rozwój i równowagę między wymaganiami a zasobami; w organizacji najłatwiej diagnozować go przez satysfakcję zawodową.
+
+2. Dobrostan - definicja i podstawowe rozumienie
+
+Dobrostan oznacza pozytywny stan funkcjonowania człowieka. Nie jest tylko brakiem choroby, stresu, konfliktu albo wypalenia. O dobrostanie mówimy wtedy, gdy człowiek nie tylko „jakoś sobie radzi”, ale ma względnie dobre samopoczucie, poczucie sensu, sprawczości, bezpieczeństwa, relacji i możliwości realizowania swojego potencjału.
+
+Na slajdzie dobrostan został opisany jako pozytywne odczucia szczęścia psychicznego i społecznego wynikające z satysfakcji z życia osobistego i zawodowego, wpływające na postrzeganie własnej jakości życia. Oznacza to, że dobrostan łączy dwie perspektywy: osobistą, czyli jak człowiek ocenia swoje życie, oraz zawodową, czyli jak doświadcza pracy.
+
+Dobrostan można też ująć jako stan, w którym jednostka doświadcza przewagi emocji pozytywnych nad negatywnymi, jest zadowolona z życia i realizuje swój potencjał. Ważne jest więc nie tylko to, czy pracownik jest chwilowo zadowolony, ale również to, czy jego praca i warunki życia pozwalają mu długofalowo funkcjonować zdrowo i sensownie.
+
+2.1. Dobrostan jako pojęcie wielowymiarowe
+
+Dobrostan składa się z wielu elementów. W notatkach egzaminacyjnych warto pokazać, że nie jest to jedno proste uczucie. Można wyróżnić m.in. dobrostan subiektywny, psychologiczny, społeczny, zawodowy, fizyczny i finansowy.
+
+• Dobrostan subiektywny: osobista ocena własnego życia i bilans emocji pozytywnych oraz negatywnych.
+
+• Dobrostan psychologiczny: poczucie sensu, autonomii, rozwoju, kompetencji, samoakceptacji i sprawczości.
+
+• Dobrostan społeczny: jakość relacji, poczucie przynależności, szacunku, wsparcia i sprawiedliwego traktowania.
+
+• Dobrostan zawodowy: doświadczenie pracy, satysfakcja zawodowa, zaangażowanie, relacje w pracy, rozwój i bezpieczeństwo psychologiczne.
+
+• Dobrostan fizyczny: zdrowie, sen, energia, regeneracja, ergonomia, brak przeciążenia.
+
+• Dobrostan finansowy: poczucie bezpieczeństwa materialnego, przewidywalności i sprawiedliwego wynagrodzenia.
+
+Do egzaminu: Dobrostan jest pojęciem szerszym niż satysfakcja. Satysfakcja jest jednym z jego komponentów, natomiast dobrostan obejmuje również zdrowie, emocje, relacje, sens, rozwój, równowagę praca - życie i warunki funkcjonowania.
+
+3. Dobrostan subiektywny
+
+Dobrostan subiektywny oznacza to, jak człowiek sam ocenia swoje życie. Jest „subiektywny”, ponieważ zależy od osobistego odczuwania, interpretacji i porównywania własnej sytuacji z oczekiwaniami. Nie wystarczy spojrzeć na obiektywne warunki, np. pensję, stanowisko czy liczbę godzin pracy, bo dwie osoby w podobnych warunkach mogą różnie oceniać swoje życie.
+
+W klasycznym ujęciu dobrostan subiektywny ma trzy składniki:
+
+• poznawczy: ogólna ocena zadowolenia z życia, np. „jestem zadowolony z tego, jak wygląda moje życie”;
+
+• afekt pozytywny: częstotliwość emocji pozytywnych, takich jak radość, spokój, nadzieja, energia, wdzięczność;
+
+• afekt negatywny: częstotliwość emocji negatywnych, takich jak lęk, smutek, złość, frustracja, bezradność.
+
+W kontekście pracownika dobrostan subiektywny jest ważny, bo praca silnie wpływa na ocenę życia. Praca daje dochód, strukturę dnia, kontakty społeczne, poczucie sensu i status, ale może też generować stres, przeciążenie, konflikty i brak czasu dla siebie.
+
+3.1. Skala Satisfaction With Life Scale Dienera
+
+Na slajdzie pojawiła się koncepcja dobrostanu subiektywnego Eda Dienera oraz skala Satisfaction With Life Scale. Skala mierzy poznawczy komponent dobrostanu, czyli globalną satysfakcję z życia. Składa się z pięciu twierdzeń:
+
+1. W większości moje życie jest bliskie ideału.
+
+2. Warunki mojego życia są doskonałe.
+
+3. Jestem zadowolony/zadowolona ze swojego życia.
+
+4. Jak dotąd osiągnąłem/osiągnęłam w życiu ważne dla mnie rzeczy.
+
+5. Gdybym mógł/mogła przeżyć życie jeszcze raz, prawie nic bym nie zmienił/zmieniła.
+
+Osoba badana ocenia, w jakim stopniu zgadza się z każdym twierdzeniem, najczęściej na skali liczbowej. Wynik pokazuje poziom satysfakcji z życia. To nie jest bezpośrednia skala satysfakcji zawodowej, ale może być używana jako część szerszej diagnozy dobrostanu pracowników.
+
+Do egzaminu: Skala Dienera mierzy ogólne zadowolenie z życia, czyli poznawczy składnik dobrostanu subiektywnego. W organizacji można zestawiać taki wynik z satysfakcją zawodową, stresem, work-life balance i danymi HR.
+
+4. Dobrostan w pracy i dobrostan w życiu osobistym
+
+Na jednym ze slajdów pokazano relację między dobrostanem w życiu osobistym a dobrostanem w miejscu pracy. Między tymi sferami zachodzi wzajemny wpływ. Praca może poprawiać życie prywatne, jeśli daje pieniądze, sens, rozwój, kontakty społeczne i poczucie wartości. Może też je pogarszać, jeśli zabiera czas, energię, zdrowie i generuje konflikty.
+
+Życie prywatne również wpływa na pracę. Wsparcie rodziny, zdrowie, stabilność finansowa i odpoczynek pomagają lepiej funkcjonować zawodowo. Natomiast problemy rodzinne, choroba, brak snu albo przeciążenie obowiązkami opiekuńczymi mogą utrudniać koncentrację i obniżać satysfakcję z pracy.
+
+Dlatego w temacie dobrostanu trzeba łączyć perspektywę organizacyjną i osobistą. Pracownik nie zostawia swojego życia prywatnego za drzwiami firmy, a skutki pracy nie kończą się w momencie wyjścia z biura.
+
+5. Work-life balance
+
+Work-life balance, czyli WLB, oznacza równowagę między pracą a życiem pozazawodowym. Nie chodzi o idealny podział czasu pół na pół. Chodzi o takie ułożenie ról, obowiązków, energii i granic, aby praca nie niszczyła życia prywatnego, a życie prywatne było możliwe do pogodzenia z pracą.
+
+WLB ma kilka wymiarów:
+
+• wymiar czasowy: czy praca nie pochłania nadmiernej liczby godzin, nadgodzin i dyspozycyjności po pracy;
+
+• wymiar energetyczny: czy po pracy zostaje siła na odpoczynek, rodzinę, naukę, pasje i regenerację;
+
+• wymiar emocjonalny: czy stres z pracy nie przenosi się stale do domu;
+
+• wymiar behawioralny: czy obowiązki zawodowe i prywatne da się realnie pogodzić;
+
+• wymiar granic: czy pracownik ma możliwość odłączenia się od pracy po godzinach.
+
+Brak WLB może prowadzić do chronicznego stresu, wypalenia, konfliktów rodzinnych, absencji, spadku zaangażowania i fluktuacji. Dobre WLB zwiększa szansę na regenerację, zdrowie psychiczne, stabilność i długofalową efektywność.
+
+Do egzaminu: Work-life balance to nie luksusowy benefit, ale element dobrostanu. Pracownik, który stale poświęca życie prywatne dla pracy, może krótkoterminowo wykonywać dużo zadań, ale długoterminowo jest bardziej narażony na wypalenie, choroby i odejście z organizacji.
+
+6. Work-life interface - czy to to samo co work-life balance?
+
+Work-life interface, czyli WLI, nie jest tym samym co work-life balance. WLI jest pojęciem szerszym. Oznacza całość wzajemnych oddziaływań między pracą a życiem prywatnym. Work-life balance jest jednym z możliwych stanów albo wymiarów tej relacji.
+
+WLI opisuje nie tylko równowagę, ale również konflikt, przenoszenie emocji i wzajemne wzbogacanie się ról. Przykłady:
+
+• konflikt praca - życie: wymagania pracy utrudniają życie prywatne, np. nadgodziny uniemożliwiają opiekę nad dzieckiem;
+
+• konflikt życie - praca: sprawy prywatne utrudniają pracę, np. choroba w rodzinie obniża koncentrację;
+
+• negatywny spillover: stres, zmęczenie i napięcie z jednej sfery przechodzą do drugiej;
+
+• pozytywny spillover: dobry nastrój, kompetencje i energia z jednej sfery wzmacniają drugą;
+
+• wzbogacenie praca - życie: praca daje umiejętności, pieniądze, poczucie wartości albo kontakty przydatne poza pracą;
+
+• wzbogacenie życie - praca: rodzina, pasje i odpoczynek zwiększają odporność oraz energię w pracy.
+
+Do egzaminu: WLB i WLI nie są synonimami. WLB oznacza równowagę, a WLI oznacza cały interfejs, czyli wszystkie pozytywne i negatywne relacje między pracą a życiem prywatnym. Można powiedzieć, że WLB mieści się w szerszym pojęciu WLI.
+
+7. Czy dobrostan można mierzyć?
+
+Tak, dobrostan można mierzyć, ale trzeba pamiętać, że nie mierzy się go jednym prostym wskaźnikiem. Dobrostan jest konstruktem wielowymiarowym, dlatego jego diagnoza powinna łączyć różne metody i poziomy analizy.
+
+Można mierzyć:
+
+• ogólne zadowolenie z życia;
+
+• satysfakcję zawodową;
+
+• poziom stresu;
+
+• wypalenie zawodowe;
+
+• zaangażowanie;
+
+• poczucie sensu pracy;
+
+• autonomię i wpływ;
+
+• jakość relacji z przełożonym i współpracownikami;
+
+• bezpieczeństwo psychologiczne;
+
+• work-life balance;
+
+• zdrowie psychiczne i fizyczne;
+
+• absencję, fluktuację, nadgodziny i intencję odejścia.
+
+7.1. Dane subiektywne i obiektywne
+
+Pomiar dobrostanu powinien łączyć dane subiektywne i obiektywne. Dane subiektywne to deklaracje pracowników: ankiety, wywiady, rozmowy, oceny satysfakcji, poczucie stresu. Dane obiektywne to np. absencja, rotacja, liczba nadgodzin, wypadki, skargi, wykorzystanie urlopów, wyniki exit interview.
+
+Sama ankieta nie wystarcza, bo pracownicy mogą odpowiadać ostrożnie albo chwilowo emocjonalnie. Same dane HR też nie wystarczają, bo pokazują skutki, ale nie zawsze pokazują przyczyny. Najlepszy pomiar łączy oba źródła.
+
+Do egzaminu: Dobrostan można mierzyć, ale najlepiej robić to wielowymiarowo: przez kwestionariusze, badania satysfakcji, skalę dobrostanu subiektywnego, pomiar stresu i wypalenia oraz twarde wskaźniki organizacyjne, takie jak absencja i fluktuacja.
+
+8. Czy można zarządzać dobrostanem pracownika?
+
+Tak, dobrostanem można zarządzać, ale nie w sensie bezpośredniego sterowania emocjami pracownika. Organizacja nie może nakazać pracownikowi, aby był szczęśliwy. Może jednak tworzyć takie warunki pracy, które zwiększają prawdopodobieństwo wysokiego dobrostanu i zmniejszają ryzyko stresu, frustracji, wypalenia oraz odejścia.
+
+Na slajdach i pierwszej kartce pojawia się kluczowa myśl: dobrostanem zarządzamy przez satysfakcję, która jest częścią dobrostanu. Satysfakcja zawodowa jest swego rodzaju oknem pomiarowym dobrostanu. Pozwala przełożyć subiektywne odczucia pracownika na konkretne wskaźniki, które organizacja może diagnozować i świadomie kształtować.
+
+8.1. Etapy zarządzania dobrostanem
+
+1. Diagnoza: badanie satysfakcji, stresu, WLB, relacji, obciążenia, poczucia sensu i innych wskaźników.
+
+2. Interpretacja: zestawienie wyników z danymi HR, np. rotacją, absencją, wynikami zespołów i exit interview.
+
+3. Identyfikacja przyczyn: ustalenie, czy problem dotyczy wynagrodzeń, relacji, przeciążenia, kultury, stylu zarządzania albo braku rozwoju.
+
+4. Interwencja: wdrożenie działań, np. zmiana organizacji pracy, szkolenia menedżerów, elastyczny czas pracy, poprawa komunikacji.
+
+5. Ewaluacja: ponowny pomiar i sprawdzenie, czy działania poprawiły wskaźniki.
+
+8.2. Przykładowe działania organizacji
+
+• projektowanie pracy tak, aby zadania były jasne, sensowne i możliwe do wykonania;
+
+• zwiększanie autonomii i wpływu pracownika na sposób wykonywania pracy;
+
+• ograniczanie nadgodzin i przeciążenia;
+
+• wprowadzanie elastycznego czasu pracy lub pracy hybrydowej, jeśli pasuje do stanowiska;
+
+• szkolenie menedżerów z komunikacji, feedbacku, rozwiązywania konfliktów i wspierania ludzi;
+
+• budowanie kultury zaufania i bezpieczeństwa psychologicznego;
+
+• zapewnianie sprawiedliwego wynagrodzenia i jasnych zasad awansu;
+
+• rozwijanie kompetencji i możliwości kariery;
+
+• przeciwdziałanie mobbingowi, dyskryminacji i toksycznym zachowaniom;
+
+• reagowanie na wyniki badań pracowniczych, a nie tylko ich zbieranie.
+
+Do egzaminu: Dobrostanem zarządza się pośrednio. Najpierw trzeba go diagnozować, a potem wpływać na czynniki, które go budują: satysfakcję, relacje, autonomię, obciążenie, kulturę, wynagrodzenie, rozwój i work-life balance.
+
+9. Satysfakcja zawodowa - czym jest?
+
+Satysfakcja zawodowa to subiektywna ocena pracy i jej elementów. Pracownik porównuje swoje oczekiwania, potrzeby i wartości z tym, czego faktycznie doświadcza w organizacji. Jeśli praca daje mu poczucie sensu, sprawiedliwości, bezpieczeństwa, rozwoju i dobrych relacji, satysfakcja rośnie. Jeśli praca jest chaotyczna, niesprawiedliwa, przeciążająca albo konfliktowa, satysfakcja spada.
+
+Na slajdzie z zaleceniami koncepcyjnymi pojawiła się definicja: satysfakcja pracownicza jest kształtowana na podstawie subiektywnej oceny pozytywnych i negatywnych uczuć oraz postaw, które odnoszą się do realizowania przez pracowników obowiązków zawodowych.
+
+Satysfakcja ma charakter:
+
+• poznawczy: pracownik ocenia, czy praca spełnia jego oczekiwania;
+
+• emocjonalny: pracownik odczuwa zadowolenie, dumę, frustrację albo rozczarowanie;
+
+• behawioralny: satysfakcja może wpływać na zachowania, np. zaangażowanie, absencję, chęć odejścia;
+
+• społeczny: zależy od relacji z przełożonym, zespołem i kulturą organizacji.
+
+Do egzaminu: Satysfakcja zawodowa jest częścią dobrostanu pracownika i najbardziej operacyjnym, mierzalnym komponentem dobrostanu w miejscu pracy. Dzięki niej organizacja może zobaczyć, które elementy pracy wymagają poprawy.
+
+10. Co wpływa na satysfakcję zawodową?
+
+Na pierwszym zdjęciu podano trzy grupy czynników wpływających na satysfakcję: osobowościowe, sytuacyjne i interakcje między ludźmi. Orientacyjne proporcje zapisane w notatkach to: czynniki osobowościowe 10-30%, czynniki sytuacyjne 40-60%, interakcje między ludźmi 10-20%. Największe znaczenie mają więc zwykle czynniki sytuacyjne, czyli realne warunki pracy i organizacji.
+
+10.1. Czynniki osobowościowe
+
+Czynniki osobowościowe to cechy pracownika, które wpływają na to, jak interpretuje pracę i jak reaguje na trudności. Nie oznacza to, że odpowiedzialność za dobrostan spoczywa tylko na jednostce. Oznacza to raczej, że ludzie różnią się wrażliwością, oczekiwaniami i stylem reagowania.
+
+Przykłady:
+
+• temperament;
+
+• poziom neurotyczności i odporności psychicznej;
+
+• optymizm lub pesymizm;
+
+• poczucie własnej skuteczności;
+
+• sumienność;
+
+• potrzeba osiągnięć;
+
+• wartości i oczekiwania wobec pracy;
+
+• wcześniejsze doświadczenia zawodowe;
+
+• sposób radzenia sobie ze stresem.
+
+10.2. Czynniki sytuacyjne
+
+Czynniki sytuacyjne to wszystko, co wynika z samej pracy, organizacji i rynku pracy. Na zdjęciu wymieniono wiele takich elementów:
+
+• warunki pracy;
+
+• właściwości pracy;
+
+• charakter, zakres i rodzaj obowiązków;
+
+• klimat i kultura organizacyjna;
+
+• jakość systemu zarządzania;
+
+• poziom i sprawność organizacji;
+
+• czas pracy;
+
+• czynniki stresogenne;
+
+• wynagrodzenia;
+
+• jakość relacji międzyludzkich;
+
+• kompetencje współpracowników i przełożonych;
+
+• rola zawodowa;
+
+• konflikty;
+
+• sytuacja na rynku pracy.
+
+Czynniki sytuacyjne są bardzo ważne, ponieważ organizacja ma na nie realny wpływ. Może zmieniać sposób zarządzania, organizację pracy, zakres obowiązków, komunikację, system wynagradzania, zasady awansu i standardy relacji.
+
+10.3. Interakcje między ludźmi
+
+Relacje w pracy mają silny wpływ na satysfakcję. Nawet dobra praca może stać się źródłem cierpienia, jeśli relacje są toksyczne, pełne konfliktów albo braku szacunku. Z drugiej strony trudna praca może być lepiej znoszona, jeśli zespół i przełożony zapewniają wsparcie.
+
+Najważniejsze elementy relacyjne:
+
+• wsparcie przełożonego;
+
+• sprawiedliwe traktowanie;
+
+• jakość komunikacji;
+
+• współpraca w zespole;
+
+• zaufanie;
+
+• bezpieczeństwo psychologiczne;
+
+• brak mobbingu i upokarzania;
+
+• konstruktywne rozwiązywanie konfliktów;
+
+• kompetencje społeczne menedżerów.
+
+Do egzaminu: Jeśli pytanie brzmi „co wpływa na satysfakcję?”, najlepiej odpowiedzieć trzema grupami: cechy pracownika, sytuacja organizacyjna i relacje. Następnie trzeba podkreślić, że największy wpływ mają czynniki sytuacyjne, bo to one obejmują warunki pracy, zarządzanie, wynagrodzenie, czas pracy, kulturę i stresory.
+
+11. Dlaczego pracownik dobrze czuje się w pracy?
+
+Pracownik dobrze czuje się w pracy, gdy doświadcza dopasowania między sobą a środowiskiem pracy. Chodzi o dopasowanie kompetencji, wartości, oczekiwań, stylu życia i potrzeb do tego, co oferuje organizacja.
+
+Pracownik zwykle czuje się dobrze, gdy:
+
+• wie, czego się od niego oczekuje;
+
+• ma jasny zakres obowiązków;
+
+• ma wpływ na sposób wykonywania pracy;
+
+• widzi sens swoich zadań;
+
+• ma odpowiednie narzędzia i zasoby;
+
+• obciążenie jest realistyczne;
+
+• otrzymuje sprawiedliwe wynagrodzenie;
+
+• ma dobre relacje z przełożonym i współpracownikami;
+
+• może rozwijać kompetencje;
+
+• jest traktowany z szacunkiem;
+
+• ma możliwość regeneracji;
+
+• praca nie niszczy życia prywatnego;
+
+• kultura organizacji jest przewidywalna i sprawiedliwa.
+
+Warto zapamiętać, że „dobre czucie się w pracy” nie oznacza braku trudnych zadań. Pracownik może dobrze czuć się w wymagającej pracy, jeśli ma zasoby, autonomię, wsparcie i poczucie sensu. Problem zaczyna się wtedy, gdy wymagania są wysokie, a zasoby niskie.
+
+12. Model pomiaru atrybutów i subiektywne odczucia
+
+Na jednym ze slajdów pojawił się model pomiaru atrybutów związany z zarządzaniem dobrostanem. Sens tego modelu można wyjaśnić tak: dobrostan nie jest widoczny bezpośrednio, dlatego organizacja obserwuje atrybuty, czyli cechy i wskaźniki, które odzwierciedlają doświadczenie pracownika.
+
+Można odróżnić atrybuty obiektywne i subiektywne:
+
+• atrybuty obiektywne: poziom wynagrodzenia, liczba nadgodzin, forma umowy, liczba zadań, liczba dni absencji, formalny zakres obowiązków;
+
+• atrybuty subiektywne: poczucie sprawiedliwości wynagrodzenia, odczuwane przeciążenie, satysfakcja, stres, poczucie sensu, ocena relacji, zaufanie do przełożonego.
+
+Najważniejsze jest to, że obiektywny warunek nie zawsze oznacza taki sam subiektywny efekt. Dwie osoby mogą mieć takie samo wynagrodzenie, ale jedna uzna je za sprawiedliwe, a druga za krzywdzące. Dwie osoby mogą mieć podobną liczbę zadań, ale jedna odbierze je jako rozwijające wyzwanie, a druga jako chaos i przeciążenie.
+
+Do egzaminu: Zarządzanie dobrostanem wymaga przełożenia subiektywnych odczuć na wskaźniki. Właśnie dlatego satysfakcja zawodowa jest tak ważna - pokazuje, jak pracownik interpretuje konkretne warunki pracy.
+
+13. Dotychczasowy stan wiedzy: determinanty satysfakcji pracowniczej
+
+Na slajdzie wymieniono determinanty lub obszary powiązane z satysfakcją pracowniczą:
+
+• efektywność organizacyjna;
+
+• zachowania pracownicze;
+
+• poziom retencji;
+
+• fluktuacje;
+
+• zadowolenie z życia osobistego;
+
+• jakość pracy;
+
+• zaangażowanie.
+
+Ważna uwaga ze slajdu: wpływ i siła tych związków nie są jednoznaczne. Oznacza to, że satysfakcja jest ważna, ale nie działa mechanicznie. Zadowolony pracownik często jest bardziej zaangażowany i rzadziej odchodzi, ale sama satysfakcja nie gwarantuje wysokiej efektywności, jeśli brakuje kompetencji, zasobów, jasnych celów albo dobrej organizacji pracy.
+
+13.1. Satysfakcja a efektywność organizacyjna
+
+Satysfakcja może wspierać efektywność, ponieważ zadowoleni pracownicy częściej współpracują, mniej energii tracą na frustrację i rzadziej odchodzą. Jednak efektywność zależy też od procesów, technologii, kompetencji, strategii i jakości zarządzania.
+
+13.2. Satysfakcja a zachowania pracownicze
+
+Wysoka satysfakcja sprzyja zachowaniom obywatelskim, takim jak pomoc innym, dzielenie się wiedzą, odpowiedzialność za zespół i dbanie o atmosferę. Niska satysfakcja może sprzyjać wycofaniu, cynizmowi, konfliktom, absencji i minimalizowaniu wysiłku.
+
+13.3. Satysfakcja a retencja i fluktuacja
+
+Satysfakcja jest jednym z ważnych czynników zatrzymujących pracownika w organizacji. Jeśli pracownik jest zadowolony, ma sensowną pracę, dobre relacje i sprawiedliwe wynagrodzenie, rzadziej szuka innej pracy. Jeśli satysfakcja spada, rośnie ryzyko intencji odejścia.
+
+13.4. Satysfakcja zawodowa a zadowolenie z życia osobistego
+
+Praca i życie osobiste wzajemnie na siebie wpływają. Dobra praca może poprawiać życie prywatne przez pieniądze, sens, strukturę dnia i poczucie wartości. Zła praca może pogarszać życie prywatne przez stres, zmęczenie i konflikty. Zadowolenie z życia osobistego może z kolei zwiększać odporność pracownika i poprawiać funkcjonowanie zawodowe.
+
+14. Czynniki pozazawodowe w modelu satysfakcji
+
+Na slajdzie dotyczącym modelu satysfakcji wymieniono czynniki pozazawodowe, czyli takie, które nie wynikają bezpośrednio ze stanowiska pracy, ale wpływają na ocenę pracy i dobrostan.
+
+Do czynników pozazawodowych należą:
+
+• wiek;
+
+• inteligencja;
+
+• stan zdrowia;
+
+• status społeczny;
+
+• życie rodzinne;
+
+• indywidualne postrzeganie doświadczenia zawodowego;
+
+• właściwości stresu;
+
+• charakter traktowania własnej kariery zawodowej.
+
+Te czynniki pokazują, dlaczego ta sama praca może być różnie oceniana. Osoba młoda może bardziej cenić rozwój i awans. Osoba z obowiązkami opiekuńczymi może bardziej cenić elastyczność. Osoba z problemami zdrowotnymi może szczególnie zwracać uwagę na obciążenie i ergonomię. Osoba z wysokimi aspiracjami może gorzej znosić stagnację.
+
+Do egzaminu: Satysfakcja zawodowa nie zależy wyłącznie od pracy. Wpływa na nią także sytuacja życiowa pracownika, jego zdrowie, rodzina, etap kariery, oczekiwania i sposób interpretowania stresu.
+
+15. Rodzaje satysfakcji
+
+Satysfakcję zawodową można analizować ogólnie albo przez konkretne wymiary. W egzaminacyjnej odpowiedzi warto podać oba poziomy.
+
+• Satysfakcja ogólna: całościowa ocena pracy.
+
+• Satysfakcja z treści pracy: czy zadania są ciekawe, sensowne i dopasowane do kompetencji.
+
+• Satysfakcja z wynagrodzenia: ocena wysokości, sprawiedliwości i przewidywalności płacy.
+
+• Satysfakcja z relacji: ocena kontaktów ze współpracownikami i przełożonymi.
+
+• Satysfakcja z warunków pracy: narzędzia, miejsce pracy, ergonomia, bezpieczeństwo.
+
+• Satysfakcja z rozwoju: szkolenia, awans, feedback, uczenie się.
+
+• Satysfakcja z organizacji: kultura, reputacja, zasady, komunikacja, styl zarządzania.
+
+• Satysfakcja z work-life balance: możliwość godzenia pracy z życiem prywatnym.
+
+Dzięki podziałowi na wymiary organizacja może lepiej diagnozować problem. Jeśli ogólna satysfakcja jest niska, trzeba wiedzieć, czy przyczyną jest wynagrodzenie, przełożony, przeciążenie, brak rozwoju czy konflikty.
+
+16. Fluktuacja pracowników
+
+Fluktuacja oznacza przepływ pracowników w organizacji, przede wszystkim odchodzenie pracowników i zastępowanie ich nowymi osobami. Może być dobrowolna, gdy pracownik sam rezygnuje, albo niedobrowolna, gdy organizacja kończy współpracę.
+
+Fluktuacja może być:
+
+• funkcjonalna: gdy odchodzą osoby niedopasowane albo bardzo mało efektywne;
+
+• dysfunkcjonalna: gdy odchodzą wartościowi, kompetentni i trudni do zastąpienia pracownicy;
+
+• dobrowolna: wynik decyzji pracownika;
+
+• niedobrowolna: wynik decyzji organizacji.
+
+16.1. Związek fluktuacji z satysfakcją i dobrostanem
+
+Niska satysfakcja i niski dobrostan zwiększają ryzyko odejścia. Pracownik, który doświadcza chronicznego stresu, konfliktów, niesprawiedliwości, braku rozwoju albo złych relacji z przełożonym, częściej zaczyna szukać innej pracy.
+
+Typowy ciąg przyczynowy wygląda tak:
+
+1. złe warunki pracy, przeciążenie albo konflikty;
+
+2. spadek satysfakcji i dobrostanu;
+
+3. wzrost stresu, cynizmu albo wypalenia;
+
+4. pojawienie się intencji odejścia;
+
+5. szukanie alternatyw na rynku pracy;
+
+6. odejście z organizacji.
+
+16.2. Koszty fluktuacji
+
+Fluktuacja jest kosztowna, bo organizacja traci wiedzę, doświadczenie i stabilność zespołu. Koszty obejmują:
+
+• rekrutację i selekcję;
+
+• wdrożenie nowej osoby;
+
+• spadek produktywności w okresie przejściowym;
+
+• przeciążenie pozostałych pracowników;
+
+• utratę wiedzy organizacyjnej;
+
+• pogorszenie atmosfery;
+
+• ryzyko utraty klientów;
+
+• pogorszenie reputacji pracodawcy.
+
+Do egzaminu: Fluktuacja jest ważnym wskaźnikiem dobrostanu organizacyjnego. Wysoka dobrowolna fluktuacja może sygnalizować problemy z satysfakcją, zarządzaniem, wynagrodzeniem, relacjami, przeciążeniem albo brakiem rozwoju.
+
+17. Stres, wypalenie i wymagania pracy
+
+Chociaż zdjęcia koncentrują się na satysfakcji, dobrostan pracownika trudno zrozumieć bez stresu i wypalenia. Stres pojawia się, gdy wymagania przekraczają zasoby pracownika. Wymagania to np. presja czasu, duża odpowiedzialność, chaos, konflikty i nadmiar zadań. Zasoby to np. autonomia, wsparcie, kompetencje, narzędzia, jasne cele i sprawiedliwość.
+
+Krótkotrwały stres może mobilizować, ale chroniczny stres obniża dobrostan. Długotrwałe przeciążenie może prowadzić do wypalenia zawodowego.
+
+Wypalenie zawodowe obejmuje najczęściej:
+
+• wyczerpanie emocjonalne i fizyczne;
+
+• cynizm, dystans albo negatywne nastawienie do pracy;
+
+• obniżone poczucie skuteczności.
+
+Do egzaminu: Dobrostan rośnie, gdy zasoby są wystarczające wobec wymagań. Dobrostan spada, gdy wymagania są wysokie, a pracownik nie ma wsparcia, autonomii, czasu, kompetencji albo sprawiedliwego traktowania.
+
+18. Zaangażowanie, satysfakcja i dobrostan - różnice
+
+Satysfakcja, zaangażowanie i dobrostan są powiązane, ale nie oznaczają tego samego.
+
+• Satysfakcja odpowiada na pytanie: czy jestem zadowolony z pracy?
+
+• Zaangażowanie odpowiada na pytanie: czy mam energię, motywację i chęć wkładania wysiłku w pracę?
+
+• Dobrostan odpowiada na pytanie: czy funkcjonuję dobrze psychicznie, społecznie, fizycznie i zawodowo?
+
+Pracownik może być zadowolony, ale mało zaangażowany, np. gdy praca jest wygodna, lecz mało rozwijająca. Może być też bardzo zaangażowany, ale przeciążony i bliski wypalenia. Dlatego organizacja nie powinna patrzeć tylko na jeden wskaźnik.
+
+19. Najważniejsze porównania pojęć
+
+19.1. Dobrostan a satysfakcja zawodowa
+
+Dobrostan jest szerszy. Satysfakcja zawodowa jest jego częścią i praktycznym wskaźnikiem. Dobrostan obejmuje również zdrowie, sens, relacje, emocje, rozwój i równowagę praca - życie.
+
+19.2. Satysfakcja z życia a satysfakcja z pracy
+
+Satysfakcja z życia dotyczy ogólnej oceny całego życia. Satysfakcja z pracy dotyczy jednej domeny, czyli pracy zawodowej. Te dwa poziomy wpływają na siebie, ale nie są identyczne.
+
+19.3. Dobrostan subiektywny a obiektywne warunki pracy
+
+Dobrostan subiektywny dotyczy tego, jak pracownik ocenia swoje życie i pracę. Obiektywne warunki to np. pensja, godziny pracy, stanowisko i formalne benefity. Obiektywnie dobre warunki nie zawsze dają wysoki dobrostan, jeśli pracownik odczuwa brak sensu, niesprawiedliwość albo konflikty.
+
+19.4. WLB a WLI
+
+Work-life balance to równowaga między pracą a życiem. Work-life interface to szersza relacja między tymi sferami: konflikt, wzbogacenie, pozytywny i negatywny wpływ.
+
+20. Gotowe odpowiedzi na możliwe pytania egzaminacyjne
+
+Pytanie: Czym jest dobrostan?
+
+Dobrostan to wielowymiarowy stan pozytywnego funkcjonowania człowieka, obejmujący zadowolenie z życia, przewagę emocji pozytywnych, poczucie sensu, zdrowie, dobre relacje i możliwość realizowania potencjału. W pracy oznacza korzystne doświadczanie roli zawodowej, warunków pracy, relacji, rozwoju i równowagi między wymaganiami a zasobami.
+
+Pytanie: Czy dobrostan można mierzyć?
+
+Tak. Dobrostan można mierzyć przez kwestionariusze, skale satysfakcji, pomiar stresu, wypalenia, zaangażowania i work-life balance oraz przez dane organizacyjne, takie jak absencja, fluktuacja, nadgodziny i wyniki exit interview. Ponieważ dobrostan jest wielowymiarowy, najlepiej mierzyć go kilkoma wskaźnikami.
+
+Pytanie: Jak można zarządzać dobrostanem?
+
+Dobrostanem zarządza się pośrednio przez tworzenie warunków pracy sprzyjających satysfakcji, zdrowiu i efektywności. Organizacja może diagnozować satysfakcję zawodową, analizować problemy i wdrażać działania dotyczące obciążenia, autonomii, wynagrodzeń, relacji, rozwoju, stylu zarządzania i work-life balance.
+
+Pytanie: Co to jest satysfakcja zawodowa?
+
+Satysfakcja zawodowa to subiektywna, poznawczo-emocjonalna ocena pracy i jej elementów. Obejmuje ocenę zadań, wynagrodzenia, relacji, przełożonego, rozwoju, warunków i organizacji. Jest częścią dobrostanu pracownika i najbardziej mierzalnym komponentem dobrostanu w miejscu pracy.
+
+Pytanie: Co wpływa na satysfakcję zawodową?
+
+Na satysfakcję wpływają czynniki osobowościowe, sytuacyjne i interpersonalne. Osobowościowe to np. temperament, optymizm, odporność i oczekiwania. Sytuacyjne to warunki pracy, wynagrodzenie, zakres obowiązków, kultura, system zarządzania, czas pracy i stresory. Interpersonalne to relacje z przełożonymi i współpracownikami, wsparcie, konflikty i atmosfera.
+
+Pytanie: Czy work-life interface to to samo co work-life balance?
+
+Nie. Work-life balance oznacza równowagę między pracą a życiem prywatnym. Work-life interface oznacza wszystkie wzajemne relacje między tymi sferami, w tym konflikt, pozytywny wpływ, negatywny spillover i wzajemne wzbogacanie się ról.
+
+Pytanie: Co to jest fluktuacja?
+
+Fluktuacja to przepływ pracowników w organizacji, zwłaszcza odejścia i zastępowanie pracowników nowymi osobami. Może być dobrowolna lub niedobrowolna, funkcjonalna lub dysfunkcjonalna. Niska satysfakcja, niski dobrostan, stres, konflikty i brak rozwoju zwiększają ryzyko fluktuacji.
+
+21. Krótka ściąga do powtórki
+
+• Dobrostan: szeroki stan dobrego funkcjonowania psychicznego, społecznego, fizycznego i zawodowego.
+
+• Dobrostan subiektywny: własna ocena życia i bilans emocji.
+
+• Satysfakcja zawodowa: ocena pracy i jej elementów; mierzalna część dobrostanu.
+
+• Satysfakcja jako okno pomiarowe: pozwala zamienić odczucia pracownika na konkretne wskaźniki organizacyjne.
+
+• WLB: równowaga praca - życie.
+
+• WLI: wszystkie wzajemne wpływy praca - życie.
+
+• Pomiar dobrostanu: ankiety, skale, rozmowy, dane HR, absencja, fluktuacja, stres, wypalenie.
+
+• Zarządzanie dobrostanem: diagnoza, interwencje, poprawa warunków pracy, ewaluacja.
+
+• Czynniki satysfakcji: osobowościowe 10-30%, sytuacyjne 40-60%, relacje 10-20%.
+
+• Fluktuacja: ważny skutek i wskaźnik problemów z satysfakcją oraz dobrostanem.
+
+22. Zdania, które warto dosłownie zapamiętać
+
+• Satysfakcja zawodowa jest oknem pomiarowym dobrostanu pracownika.
+
+• Dobrostanem nie zarządza się bezpośrednio, lecz przez warunki pracy, relacje, kulturę, styl zarządzania i satysfakcję zawodową.
+
+• Work-life interface jest pojęciem szerszym niż work-life balance.
+
+• Dobrostan można mierzyć, ale wymaga to wielu wskaźników, ponieważ jest konstruktem wielowymiarowym.
+
+• Największy wpływ na satysfakcję mają zwykle czynniki sytuacyjne, czyli realne warunki pracy i organizacji.
+
+• Wysoka fluktuacja może być sygnałem niskiej satysfakcji, złego zarządzania albo obniżonego dobrostanu.
